@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot name="g1_minimal_slam">
+
+  <!-- Root link: torso_link (logical robot center) -->
+  <link name="torso_link">
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <link name="livox_frame"/>
+
+  <link name="imu_link"/>
+
+  <joint name="livox_mount_joint" type="fixed">
+    <origin xyz="0.0002835 0.00003 0.41618" rpy="0 0.04014257279586953 0"/>
+    <parent link="torso_link"/>
+    <child link="livox_frame"/>
+  </joint>
+
+  <joint name="imu_mount_joint" type="fixed">
+    <origin xyz="0.0112835 0.02332 0.37206" rpy="0 0 0"/>
+    <parent link="torso_link"/>
+    <child link="imu_link"/>
+  </joint>
+
+</robot>
