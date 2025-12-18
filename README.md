@@ -1,5 +1,9 @@
 # 前提 
 
+## 配置G1 ros2环境
+参考https://github.com/unitreerobotics/unitree_ros2.git 安装在`$HOME`下
+添加G1环境脚本 setup.bash
+
 ## 安装cartographer包 二选一
 1. 包管理器
   sudo apt install ros-humble-cartographer
